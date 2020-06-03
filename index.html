@@ -16,9 +16,7 @@
             
             <div class="product-info">
             <h1>{{ productName }}</h1>
-            <p v-if="stock > 20">In Stock</p>
-            <p v-else-if="stock <= 10 && stock > 0">Low Stock</p>
-            <p v-else>Out Of Stock</p>
+            <p v-if="stock">In Stock</p>
             <h3>
                 {{ productDescription}}
             </h3>
