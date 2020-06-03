@@ -13,11 +13,14 @@
             <div class="product-image">
                 <img v-bind:src="image">
             </div>
-            <h1>{{ productName }}</h1>
+            
             <div class="product-info">
-            <h1>
+            <h1>{{ productName }}</h1>
+            <p v-if="inStock">In Stock</p>
+            <p v-else>Out Of Stock</p>
+            <h3>
                 {{ productDescription}}
-            </h1>
+            </h3>
             <!-- You can shorthand v-bind:element to just :element -->
             <p>Click <a :href="link">link</a> for more info</p>
             </div>
