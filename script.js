@@ -5,6 +5,6 @@ var heroApp = new Vue ({
         productDescription:"This is a lovely pair of socks!",
         image: "/images/green-socks.jpg",
         link: "https://www.google.com",
-        stock: false,
+        onSale: true,
     }
 })
