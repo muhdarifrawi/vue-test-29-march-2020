@@ -9,7 +9,10 @@ var heroApp = new Vue ({
         colours: [
         {
             id:1001,
-            colourChoice: "blue"
+            colourChoice: [{
+                name: "one",
+                class: "two", 
+                type: "three"}]
 
         },
         {
