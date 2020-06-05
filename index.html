@@ -20,7 +20,7 @@
             <h3>
                 {{ productDescription}}
             </h3>
-            <li v-for="each in colours">{{each}}</li>
+            <li v-for="each in colours">{{each.colourChoice}}</li>
             <!-- You can shorthand v-bind:element to just :element -->
             <p>Click <a :href="link">link</a> for more info</p>
             </div>
