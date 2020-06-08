@@ -20,12 +20,10 @@
                 <h3>
                     {{ productDescription}}
                 </h3>
-                <div v-for="each in colours":key="each.id">
-                    <!-- shorthanded v-on to @ -->
-                    <p @mouseover="updateProduct(each.image)" 
-                        :style="{backgroundColor:each.coloursChoice}"
-                        class="color-box">
-                    </p>
+                <div v-for="each in colours":key="each.id"
+                    @mouseover="updateProduct(each.image)" 
+                    :style="{backgroundColor:each.coloursChoice}"
+                    class="color-box">
                 </div>
                 <!-- You can shorthand v-bind:element to just :element -->
                 <p>Click <a :href="link">link</a> for more info</p>
