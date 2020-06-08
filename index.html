@@ -15,8 +15,8 @@
             </div>
             
             <div class="product-info">
-                <h1>{{ productName }}</h1>
-                <p v-if="onSale">On Sale Now!</p>
+                <h1>{{ productName }} </h1>
+                <p v-if="onSale">On Sale Now!<span class="cart">Cart ({{cart}})</span></p>
                 <h3>
                     {{ productDescription}}
                 </h3>
@@ -29,10 +29,9 @@
                 <!-- You can shorthand v-bind:element to just :element -->
                 <p>Click <a :href="link">link</a> for more info</p>
 
-                <button v-on:click="addToCart">Add to cart</button>
-                <div class="cart">
-                Cart ({{cart}})
-                </div>
+                <button @click="removeFromCart">-</button>
+                <button @click="addToCart">+</button>
+                
             </div>
         </div>
     </div>

@@ -19,8 +19,11 @@ var heroApp = new Vue ({
         cart: 0
     },
     methods: {
-        addToCart: function() {
+        addToCart() {
             this.cart += 1;
+        },
+        removeFromCart() {
+            this.cart -= 1;
         },
         updateProduct(image){
             this.image = image;
