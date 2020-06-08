@@ -8,5 +8,10 @@ var heroApp = new Vue ({
         onSale: true,
         colours: ["red", "blue", "green"],
         cart: 0
+    },
+    methods: {
+        addToCart: function() {
+            this.cart += 1;
+        }
     }
 })
