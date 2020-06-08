@@ -21,7 +21,8 @@
                     {{ productDescription}}
                 </h3>
                 <div v-for="each in colours":key="each.id">
-                    <li v-on:mouseover="updateProduct(each.image)" >
+                    <!-- shorthanded v-on to @ -->
+                    <li @mouseover="updateProduct(each.image)" >
                         {{each.coloursChoice}}
                     </li>
                 </div>
