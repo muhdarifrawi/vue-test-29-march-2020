@@ -6,23 +6,7 @@ var heroApp = new Vue ({
         image: "/images/green-socks.jpg",
         link: "https://www.google.com",
         onSale: true,
-        colours: [
-        {
-            id:1001,
-            colourChoice: [{
-                name: "one",
-                class: "two", 
-                type: "three"}]
-
-        },
-        {
-            id:1002,
-            colourChoice: "red"
-        },
-        {
-            id:1003,
-            colourChoice: "green"
-        }
-    ]
+        colours: ["red", "blue", "green"],
+        cart: 0
     }
 })

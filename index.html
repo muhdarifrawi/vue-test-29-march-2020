@@ -15,18 +15,21 @@
             </div>
             
             <div class="product-info">
-            <h1>{{ productName }}</h1>
-            <p v-if="onSale">On Sale Now!</p>
-            <h3>
-                {{ productDescription}}
-            </h3>
-            <ul v-for="each in colours[0].colourChoice">
-                <li>{{each.name}}</li>
-                <li>{{each.class}}</li>
-                <li>{{each.type}}</li>
-            </ul>
-            <!-- You can shorthand v-bind:element to just :element -->
-            <p>Click <a :href="link">link</a> for more info</p>
+                <h1>{{ productName }}</h1>
+                <p v-if="onSale">On Sale Now!</p>
+                <h3>
+                    {{ productDescription}}
+                </h3>
+                <li v-for="each in colours">
+                    {{each}}
+                </li>
+                <!-- You can shorthand v-bind:element to just :element -->
+                <p>Click <a :href="link">link</a> for more info</p>
+
+                <button v-on:click="cart += 1">Add to cart</button>
+                <div class="cart">
+                Cart ({{cart}})
+                </div>
             </div>
         </div>
     </div>
