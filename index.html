@@ -28,8 +28,13 @@
                 <!-- You can shorthand v-bind:element to just :element -->
                 <p>Click <a :href="link">link</a> for more info</p>
 
-                <button @click="removeFromCart">-</button>
-                <button @click="addToCart">+</button>
+                <button @click="removeFromCart"
+                :class="{ disabledButton: !inStock}"
+                :disabled="!inStock">-</button>
+
+                <button @click="addToCart"
+                    :class="{ disabledButton: !inStock}"
+                    :disabled="!inStock">+</button>
                 
             </div>
         </div>

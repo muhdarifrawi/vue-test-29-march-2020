@@ -16,7 +16,8 @@ var heroApp = new Vue ({
             coloursChoice: "green",
             image:"/images/green-socks.jpg"
         }],
-        cart: 0
+        cart: 0,
+        inStock: false,
     },
     methods: {
         addToCart() {
