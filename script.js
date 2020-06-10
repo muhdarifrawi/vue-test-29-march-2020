@@ -4,7 +4,7 @@ var heroApp = new Vue ({
         brand:"Legit",
         productName:"Socks",
         productDescription:"This is a lovely pair of socks!",
-        image: "/images/green-socks.jpg",
+        selectedProduct: 0,
         link: "https://www.google.com",
         onSale: true,
         colours: [{
@@ -17,10 +17,9 @@ var heroApp = new Vue ({
             id:1002,
             coloursChoice: "green",
             image:"/images/green-socks.jpg",
-            stock: 3
+            stock: 0
         }],
         cart: 0,
-        inStock: false,
     },
     methods: {
         addToCart() {
@@ -29,13 +28,20 @@ var heroApp = new Vue ({
         removeFromCart() {
             this.cart -= 1;
         },
-        updateProduct(image){
-            this.image = image;
+        updateProduct(index){
+            this.selectedProduct = index;
+            console.log(index);
         }
     },
     computed: {
         title() {
             return this.brand + " " + this.productName
+        },
+        image(){
+            return this.colours[this.selectedProduct].image
+        },
+        inStock(){
+            return this.colours[this.selectedProduct].stock
         }
     }
 })

@@ -17,11 +17,13 @@
             <div class="product-info">
                 <h1>{{ title }} </h1>
                 <p v-if="onSale">On Sale Now!<span class="cart">Cart ({{cart}})</span></p>
+                <p v-if="inStock">In Stock! Availability: {{inStock}}</p>
+                <p v-else="inStock">Sorry, none available</p>
                 <h3>
                     {{ productDescription}}
                 </h3>
-                <div v-for="each in colours":key="each.id"
-                    @mouseover="updateProduct(each.image)" 
+                <div v-for="(each, index) in colours":key="each.id"
+                    @mouseover="updateProduct(index)" 
                     :style="{backgroundColor:each.coloursChoice}"
                     class="color-box">
                 </div>
